@@ -1,9 +1,8 @@
-<h1>New Book</h1>
-
+<h1>Editing Book</h1>
 <%= form_for(@book) do |f| %>
 <p>Tttle</p>
   <%= f.text_field :title %>
 <p>Opinion</p>
   <%= f.text_area :body %>
-  <%= f.submit"Create Book" %>
+  <%= f.submit"Update Book" %>
 <% end %>
