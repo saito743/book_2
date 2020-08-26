@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <tr>
+      <th colspan="1"></th>
+      <th>Title</th>
+      <th>Body</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<% @books.each do |book| %>
+	  <tr>
+      <td><%= book.user.name %></td>
+	    <td><%= book.title %></td>
+	    <td><%= book.body %></td>
+	  </tr>
+	 <% end %>
+  </tbody>
+</table>
