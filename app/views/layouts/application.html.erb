@@ -19,14 +19,14 @@
       <nav>
         <ul class="header-list">
           <% if user_signed_in? %>
-            <li><%= link_to 'Home', user_path(current_user.id) %></li>
-            <li><%= link_to 'User', root_path %></li>
-            <li><%= link_to 'Books', root_path %></li>
+            <li>Home</li>
+            <li>User</li>
+            <li>Books</li>
             <li><%= link_to "logout",destroy_user_session_path, method: :delete %></li>
           <% else %>
-            <li><%= link_to 'Home', root_path %></li>
-            <li class="no-color-change"><%= link_to 'About', root_path %></li>
-            <li class="no-color-change"><%= link_to "sign up", new_user_registration_path %></li>
+            <li>Home</li>
+            <li>About</li>
+            <li><%= link_to "sign up", new_user_registration_path %></li>
             <li class="no-color-change"><%= link_to "login",new_user_session_path %></li>
           <% end %>
         </ul>
