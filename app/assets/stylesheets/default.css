@@ -1,0 +1,24 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header{
+	background-color: #222;
+	min-height: 50px;
+	margin-bottom: 20px;
+}
+nav{
+	list-style: none;
+}
+.header-title{
+	color: #fff;
+	display: inline-block;
+}
+li{
+	display: inline-block;
+}
+li>a{
+	color: #9d9d9d;
+}
