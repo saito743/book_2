@@ -1,3 +1,21 @@
+<h2>User info</h2>
+  <%= attachment_image_tag @user, :profile_image, size:'100x100', fallback: "no_image.jpg" %>
+<table>
+  <tbody>
+    <tr>
+      <th>name</th>
+      <th><%= @user.name %></th>
+    </tr>
+    <tr>
+      <th>introduction</th>
+      <th><%= @user.introduction %></th>
+    </tr>
+  </tbody>
+</table>
+<% if @user.id == current_user.id %>
+  <%= link_to "編集", edit_user_path(@user) %>
+<% end %>
+
 <h1>Users</h1>
   <table>
   	<thead>
