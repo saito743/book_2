@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root 'homes#top'
   resources :books, only: [:new, :create, :index, :show, :edit, :update, :destroy]
-  resources :users, only: [:show, :edit, :update]
+  resources :users, only: [:show, :edit, :update, :index]
   resources :homes, only: [:top] do
     collection do
     	get 'about'
