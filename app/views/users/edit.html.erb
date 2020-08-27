@@ -4,7 +4,7 @@
     <%= f.text_field :name %><br />
   <label for="user_profile_image">Image</label>
     <div>
-    	<%= attachment_image_tag @user, :profile_image, :fill, 100, 100, fallback: "no_image.jpg" %>
+    	<%= attachment_image_tag @user, :profile_image, size:'100x100', fallback: "no_image.jpg",size:'100x100' %>
     </div>
     <%= f.attachment_field :profile_image %><br />
   <label for="user_name">Introduction</label>
