@@ -1,39 +1,4 @@
-<h2>User info</h2>
-  <%= attachment_image_tag @user, :profile_image, size:'100x100', fallback: "no_image.jpg", size:'100x100' %>
-    <table>
-      <tbody>
-        <tr>
-          <th>name</th>
-          <th><%= @user.name %></th>
-        </tr>
-        <tr>
-          <th>introduction</th>
-          <th><%= @user.introduction %></th>
-        </tr>
-      </tbody>
-    </table>
-    <% if @user.id == current_user.id %>
-      <%= link_to "編集", edit_user_path(@user) %>
-    <% end %>
-
-    <h1>New Book</h1>
-<% if @book.errors.any? %>
-  <div class="error_explanation">
-    <h2><%= @book.errors.count %>errors prohibited this book from being saved:</h2>
-    <ul>
-      <% @book.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
-<%= form_for(@book) do |f| %>
-<p>Tttle</p>
-  <%= f.text_field :title %>
-<p>Opinion</p>
-  <%= f.text_area :body %>
-  <%= f.submit"Create Book" %>
-<% end %>
+<%= render 'books/sidebar', user:@user, book:@book %>
 
 <h2>Books</h2>
 <table>
