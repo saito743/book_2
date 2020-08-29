@@ -21,22 +21,22 @@
           <% if user_signed_in? %>
             <li>
               <%= link_to user_path(current_user.id) do %>
-              <a class="glyphicon glyphicon-home list-logo" aria-hidden="true">  Home</a>
+              <span class="glyphicon glyphicon-home list-logo" aria-hidden="true">  Home</span>
               <% end %>
             </li>
             <li>
               <%= link_to users_path do %>
-              <a class="glyphicon glyphicon-user list-logo" aria-hidden="true"> Users</a>
+              <span class="glyphicon glyphicon-user list-logo" aria-hidden="true"> Users</span>
               <% end %>
             </li>
             <li>
               <%= link_to books_path do %>
-              <a class="glyphicon glyphicon-book list-logo" aria-hidden="true"> Books</a>
+              <span class="glyphicon glyphicon-book list-logo" aria-hidden="true"> Books</span>
               <% end %>
             </li>
             <li>
               <%= link_to destroy_user_session_path, method: :delete  do %>
-              <a class="glyphicon glyphicon-log-out list-logo" aria-hidden="true">  ogout</a>
+              <span class="glyphicon glyphicon-log-out list-logo" aria-hidden="true"> logout</span>
               <% end %>
             </li>
           <% else %>
@@ -72,7 +72,7 @@
 <div class="container">
   <footer>
     <div class="row">
-      <p class="col-md-3 col-md-offset-9">CopyRight Infratop.inc</p>
+      <p class="col-xs-3 col-xs-offset-9">CopyRight Infratop.inc</p>
     </div>
   </footer>
 </div>

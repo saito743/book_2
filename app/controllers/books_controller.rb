@@ -9,7 +9,7 @@ class BooksController < ApplicationController
 		@book.user_id = current_user.id
 		if  @book.save
 			@user = @book.user
-		    redirect_to user_path(@user)
+		    redirect_to book_path(@book.id)
 		    flash[:complete] = "Book was successfully created."
 		else
 			render 'new'
@@ -46,7 +46,7 @@ class BooksController < ApplicationController
 	def destroy
 		@book = Book.find(params[:id])
 		@book.destroy
-		redirect_to books_path
+		redirect_to users_path
 		flash[:delete] = "Book was successfully destroyed."
 	end
 private
