@@ -12,7 +12,10 @@ class BooksController < ApplicationController
 		    redirect_to book_path(@book.id)
 		    flash[:complete] = "Book was successfully created."
 		else
-			render 'new'
+			if controller.controller_name == "books"
+				if controller.controller_action == "index"
+				end
+			end
 		end
 	end
 

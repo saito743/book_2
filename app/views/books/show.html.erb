@@ -1,11 +1,10 @@
-<div class="container">
   <div class="row">
     <div class="col-xs-3">
       <%= render 'books/sidebar', user:@user, book:@books %>
     </div>
-    <div class="table">
+    <div class="col-xs-9">
       <h2>Book detail</h2>
-        <table class="col-xs-12">
+        <table class="table">
           <tbody>
       	  <tr>
       	  	<td>
@@ -13,7 +12,7 @@
               <% if @user.profile_image.present? %>
                   <%= attachment_image_tag @book.user, :profile_image, :fill, 100, 100 %>
                 <% else %>
-                  <%= image_tag 'no_image.jpg', size: '100x100' %>
+                  <%= image_tag 'no_image.jpg', size: '40x40' %>
                 <% end %>
                 <br />
                 <%= @book.user.name %>

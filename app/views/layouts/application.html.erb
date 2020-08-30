@@ -67,6 +67,15 @@
   </header>
   <div class="container">
     <p class="notice"><%= notice %><%= alert %></p>
+    <% if @book.errors.any? %>
+      <div id="error_explanation">
+        <h2><strong><%= @book.errors.count %>errors prohibited this *** from being saved:</strong></h2>
+          <ul>
+            <% @book.errors.full_messages.each do |msg| %>
+              <li><% msg %></li>
+            <% end %>
+          </ul>
+    <% end %>
 
     <%= yield %>
 <div class="container">
