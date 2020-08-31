@@ -6,11 +6,9 @@ before_action :correct_user, only: [:edit,:update]
 		@book = Book.new(book_params)
 		@book.user_id = current_user.id
 		if @book.save
-			# @user = @book.user
 		    redirect_to book_path(@book.id)
 		    flash[:notice] = "Book was successfully created."
 		else
-			# @user = User.find(current_user.id)
 			@books = Book.all
 			render 'index'
 		end
