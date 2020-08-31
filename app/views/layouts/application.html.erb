@@ -5,8 +5,8 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
@@ -66,16 +66,8 @@
     </div>
   </header>
   <div class="container">
-    <p class="notice"><%= notice %><%= alert %></p>
-    <% if @book.errors.any? %>
-      <div id="error_explanation">
-        <h2><strong><%= @book.errors.count %>errors prohibited this *** from being saved:</strong></h2>
-          <ul>
-            <% @book.errors.full_messages.each do |msg| %>
-              <li><% msg %></li>
-            <% end %>
-          </ul>
-    <% end %>
+    <p class="notice"><%= notice %></p>
+
 
     <%= yield %>
 <div class="container">
