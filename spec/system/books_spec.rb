@@ -29,7 +29,6 @@ describe '投稿のテスト' do
 		  	fill_in 'book[title]', with: Faker::Lorem.characters(number:5)
 		  	fill_in 'book[body]', with: Faker::Lorem.characters(number:20)
 		  	click_button 'Create Book'
-        binding.pry
 		  	expect(page).to have_content 'successfully'
 		  end
 		  it '投稿に失敗する' do
