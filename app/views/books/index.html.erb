@@ -1,7 +1,7 @@
 
 <% if @book.errors.any? %>
   <div id="error_explanation">
-    <h3><strong><%= @book.errors.count %> error prohibited this book from being saved:</strong></h3>
+    <h3><strong><%= @book.errors.count %> errors prohibited this book from being saved:</strong></h3>
       <ul>
       <% @book.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
