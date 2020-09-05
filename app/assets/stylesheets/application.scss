@@ -15,3 +15,27 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#container{
+  height: 500px;
+}
+@media screen and (max-width:768px){
+	#container{
+		height: 400px;
+	}
+}
+.top-image1{
+	background-image: url(top-1.jpeg);
+}
+.top-image2{
+	background-image: url(top-2.jpeg);
+}
+.top-image3{
+	background-image: url(top-3.jpeg);
+}
+.top-image4{
+	background-image: url(top-4.jpeg);
+}
+.top-image5{
+	background-image: url(top-5.jpeg);
+}

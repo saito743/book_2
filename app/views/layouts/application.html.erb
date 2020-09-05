@@ -14,7 +14,9 @@
     <header>
     <div class="container">
       <nav>
-        <span class="header-title">Bookers</span>
+        <%= link_to root_path do %>
+          <span id="header-title">Bookers</span>
+        <% end %>
       </nav>
       <nav>
         <ul class="header-list">
@@ -65,7 +67,6 @@
       </nav>
     </div>
   </header>
-  <div class="container">
     <p class="notice"><%= notice %></p>
 
 
@@ -75,6 +76,7 @@
     <div class="row">
       <p class="col-xs-3 col-xs-offset-9">CopyRight Infratop.inc</p>
     </div>
+
   </footer>
 </div>
   </body>
